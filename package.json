@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-onny",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "Lint specs for Onny",
   "main": "index.js",
   "scripts": {
