@@ -11,11 +11,9 @@ module.exports = {
     'airbnb'
   ],
   env: {
-    browser: true,
     node: true,
     mocha: true,
-    es6: true,
-    mongo: true
+    es6: true
   },
   parser: 'babel-eslint',
   parserOptions: {
@@ -28,34 +26,21 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react',
     'import',
     'json',
     'chai-expect',
     'chai-friendly'
   ],
-  settings: {
-    react: {
-      pragma: 'React',
-      // Pragma to use, default to "React"
-      version: '15.0'
-      // React version, default to the latest React stable release
-    }
-  },
   globals: {
     // declare global variables. false means read only. to set it when false use global. (ex global.data sets the data global when false)
     __BUILD_DATE__: false,
     __VERSION__: false,
-    __stack: false,
     __ROOT__: false,
     __CLIENT__: false,
     __TEST__: false,
     __DEVELOPMENT__: false,
-    __DEVTOOLS__: false,
-    __DEVTOOLS__EXTENTION__: false,
     __LOGGING__: false,
-    __WIN32__: false,
-    __DISABLE_SSR__: false
+    __WIN32__: false
   },
   rules: {
     /////////////////////
@@ -106,13 +91,7 @@ module.exports = {
           '_id',
           '__v',
           '__INITIAL_STATE__',
-          '__DEVELOPMENT__',
-          '__LOGGING__',
-          '__DEVTOOLS__',
-          '__DEVTOOLS__EXTENTION__',
-          '__PORT__',
-          '__HOST__',
-          '__test__'
+          '__DEVELOPMENT__'
         ]
       }
     ],
