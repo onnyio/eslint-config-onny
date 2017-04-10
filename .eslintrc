@@ -1,0 +1,111 @@
+{
+  "license": [
+    "Copyright (C) 2015-2016 9Fifty-Seven - All Rights Reserved",
+    "This file is part of book-react-redux and is the sole property of its owner.",
+    "Unauthorized use of this file, via any medium or form, whole or in part, is strictly prohibited without the expressed written permission of 9Fifty-Seven and/or Isaac Marotte",
+    "This file is proprietary and confidential",
+    "Created by imarotte on 9/8/2016"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true,
+    "browser": false,
+    "mongo": false
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "modules": true,
+      "decorators": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import",
+    "json"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      // Pragma to use, default to "React"
+      "version": "15.0"
+      // React version, default to the latest React stable release
+    }
+  },
+  "globals": {
+    // declare global variables. false means read only. to set it when false use global. (ex global.data sets the data global when false)
+    "__VERSION__": false,
+    "__stack": false,
+    "__ROOT__": false,
+    "__CLIENT__": false,
+    "__TEST__": false,
+    "__DEVELOPMENT__": false,
+    "__DEVTOOLS__": false,
+    "__DEVTOOLS__EXTENTION__": false,
+    "__LOGGING__": false,
+    "__WIN32__": false,
+    "__DISABLE_SSR__": false
+  },
+  "rules": {
+    /////////////////////
+    // Turn Off
+    /////////////////////
+    "radix": 0,
+    // not needed in ES5 or later
+    "no-else-return": 0,
+    // makes the code more readable
+    "import/imports-first": [0, "DISABLE-absolute-first"],
+
+
+    /////////////////////
+    // Warnings
+    /////////////////////
+    "semi": [1, "always"],
+    "no-unused-vars": [1, {"args": "none"}],
+    // allows us to retain args for API calls
+    "linebreak-style": [1, "unix"],
+
+
+    /////////////////////
+    // Errors
+    /////////////////////
+    "indent": [2, 2, {"SwitchCase": 1, "VariableDeclarator": 1, "outerIIFEBody": 1}],
+    "max-len": [2, {"code": 100, "tabWidth": 4, "ignoreComments": true}],
+    "arrow-body-style": [2, "as-needed", {"requireReturnForObjectLiteral": true}],
+    "no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 2}],
+    "new-cap": [2, {"capIsNewExceptions": ["Router"]}],
+    "strict": [2, "safe"],
+    // stupid airbnb. this should be off!
+    "comma-dangle": [2, "never"],
+    "no-underscore-dangle": [
+      2, {
+        "allow": [
+          "_id",
+          "__INITIAL_STATE__",
+          "__DEVELOPMENT__",
+          "__LOGGING__",
+          "__DEVTOOLS__",
+          "__DEVTOOLS__EXTENTION__",
+          "__PORT__",
+          "__HOST__",
+          "__test__"
+        ]
+      }
+    ],
+    // deprecated rule from airbnb
+    //    "import/order": ["error", {"newlines-between": "never"}],
+    "import/no-extraneous-dependencies": [2, {"devDependencies": false}],
+    "spaced-comment": [
+      // this may cause issues on linux based systems.
+      2, "always", {"exceptions": ["/"]}
+    ]
+  }
+}
