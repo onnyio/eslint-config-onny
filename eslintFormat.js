@@ -16,8 +16,9 @@
  */
 
 
-const chalk = require('chalk'),
-  table = require('text-table');
+const chalk = require('chalk');
+const table = require('text-table');
+const stripAnsi = require('strip-ansi');
 
 //------------------------------------------------------------------------------
 // Helpers
@@ -79,7 +80,7 @@ module.exports = function (results) {
       {
         align: ['', 'r', 'l'],
         stringLength(str) {
-          return chalk.stripColor(str).length;
+          return stripAnsi(str).length;
         }
       }
     ).split('\n').map((el) => {
