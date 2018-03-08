@@ -57,6 +57,8 @@ module.exports = {
     // Turn Off
     /////////////////////
     radix: 0,
+    "function-paren-newline": 0,
+    "prefer-destructuring": 0,
     // not needed in ES5 or later
     'no-else-return': 0,
     // makes the code more readable
@@ -75,6 +77,15 @@ module.exports = {
     /////////////////////
     // Errors
     /////////////////////
+    "object-curly-newline": ["error", {
+      "multiline": true,
+      "consistent": true
+    }],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to"],
+      "aspects": [ "noHref", "preferButton" ]
+    }],
     indent: [2, 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
     'max-len': [2, { code: 100, tabWidth: 4, ignoreComments: true }],
     'arrow-body-style': [2, 'as-needed', { requireReturnForObjectLiteral: true }],
