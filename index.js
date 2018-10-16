@@ -26,7 +26,6 @@ module.exports = {
   },
   plugins: [
     'import',
-    'json',
     'chai-expect',
     'chai-friendly'
   ],
