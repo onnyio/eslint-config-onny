@@ -22,17 +22,17 @@
   },
   "homepage": "https://github.com/onnyio/eslint-config-onny#readme",
   "dependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.4.5",
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.2",
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-chai-expect": "^2.0.1",
     "eslint-plugin-chai-friendly": "^0.4.1",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.13.0",
     "strip-ansi": "^5.2.0"
   }
 }
