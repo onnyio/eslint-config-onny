@@ -7,7 +7,7 @@
  *
  * This file is proprietary and confidential
  *
- * Last Modified: 2019.7.21
+ * Last Modified: 2019.7.22
  */
 
 
@@ -103,8 +103,10 @@ module.exports = {
      * due to incomplete refactoring. Such variables take up space in the code
      * and can lead to confusion by readers
      * @see [https://eslint.org/docs/rules/no-unused-vars]{@link https://eslint.org/docs/rules/no-unused-vars}
+     *
+     * args - none - makes the code more readable, we can remove these with webpack
      */
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
+    'no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: false }],
 
     'linebreak-style': [1, 'unix'],
 
