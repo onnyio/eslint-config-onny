@@ -147,8 +147,6 @@ module.exports = {
     ],
     // deprecated rule from airbnb
     //    "import/order": ["error", {"newlines-between": "never"}],
-    'import/no-extraneous-dependencies': [2, { devDependencies: false }],
-
 
     // require or disallow a space immediately following the // or /* in a comment
     // http://eslint.org/docs/rules/spaced-comment
