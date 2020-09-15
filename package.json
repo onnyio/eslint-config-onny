@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-onny",
-  "version": "0.0.1-5",
+  "version": "0.0.1-6",
   "description": "Lint specs for Onny",
   "main": "index.js",
   "scripts": {
@@ -22,20 +22,20 @@
   },
   "homepage": "https://github.com/onnyio/eslint-config-onny#readme",
   "dependencies": {
-    "@babel/core": "^7.9.6",
+    "@babel/core": "^7.11.6",
     "babel-eslint": "^10.1.0",
-    "chalk": "^4.0.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-import-resolver-webpack": "^0.12.1",
-    "eslint-plugin-chai-expect": "^2.1.0",
+    "chalk": "^4.1.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-import-resolver-webpack": "^0.12.2",
+    "eslint-plugin-chai-expect": "^2.2.0",
     "eslint-plugin-chai-friendly": "^0.6.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-json": "^2.1.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "strip-ansi": "^6.0.0"
   }
 }
