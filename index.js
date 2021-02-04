@@ -60,9 +60,6 @@ module.exports = {
     'chai-expect/terminating-properties': 1,
 
 
-    /////////////////////
-    // Turn Off
-    /////////////////////
     radix: 0,
     'function-paren-newline': 0,
     'prefer-destructuring': 0,
@@ -92,10 +89,13 @@ module.exports = {
      */
     'react/no-did-update-set-state': 0,
 
+    /*
+    * https://eslint.org/docs/rules/arrow-body-style
+    */
+    'arrow-body-style': ['off'],
+    // 'arrow-body-style': [2, 'as-needed', { requireReturnForObjectLiteral: true }],
 
-    /////////////////////
-    // Warnings
-    /////////////////////
+
     semi: [1, 'always'],
 
     /**
@@ -106,7 +106,11 @@ module.exports = {
      *
      * args - none - makes the code more readable, we can remove these with webpack
      */
-    'no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: false }],
+    'no-unused-vars': ['error', {
+      vars: 'all',
+      args: 'none',
+      ignoreRestSiblings: false
+    }],
 
     'linebreak-style': [1, 'unix'],
 
@@ -118,15 +122,21 @@ module.exports = {
       multiline: true,
       consistent: true
     }],
-    'jsx-a11y/anchor-is-valid': ['error', {
-      components: ['Link'],
-      specialLink: ['to'],
-      aspects: ['noHref', 'preferButton']
+    indent: [2, 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 1,
+      outerIIFEBody: 1
     }],
-    indent: [2, 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
-    'max-len': [2, { code: 100, tabWidth: 4, ignoreComments: true }],
-    'arrow-body-style': [2, 'as-needed', { requireReturnForObjectLiteral: true }],
-    'no-multiple-empty-lines': [2, { max: 2, maxEOF: 2 }],
+    'max-len': [2, {
+      code: 100,
+      tabWidth: 4,
+      ignoreComments: true
+    }],
+
+    'no-multiple-empty-lines': [2, {
+      max: 2,
+      maxEOF: 2
+    }],
     'new-cap': [2, { capIsNewExceptions: ['Router', 'Map', 'List'] }],
     strict: [2, 'safe'],
     'comma-dangle': [2, 'never'],
@@ -162,6 +172,53 @@ module.exports = {
           markers: ['=', '!'], // space here to support sprockets directives
           balanced: false
         }
-      }]
+      }],
+
+
+    ///////////////////
+    // React
+    ///////////////////////
+    // When there is only a single export from a module, prefer using default export over named export.
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
+    // this is prefered by airbnb, but i actually prefer named exports. makes it easier for the IDE
+    // to assist me
+    'import/prefer-default-export': 0,
+
+
+    // Disallow JSX props spreading
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+    'react/jsx-props-no-spreading': ['error', {
+      html: 'enforce',
+      custom: 'ignore',
+      exceptions: []
+    }],
+
+    // Enforces where React component static properties should be positioned
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
+    'react/static-property-placement': ['error', 'static public field'],
+    'react/destructuring-assignment': 0,
+    'react/require-default-props': [2, { forbidDefaultForRequired: false }],
+    'react/jsx-one-expression-per-line': 0,
+
+    /*
+    * Enforce that a label tag has a text label and an associated control.
+    *
+    * There are two supported ways to associate a label with a control:
+    *    * Wrapping a control in a label tag.
+    *    * Adding htmlFor to a label and assigning it a DOM ID string that indicates
+    *      an input on the page.
+    * https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
+    */
+    'jsx-a11y/label-has-associated-control': [2, {
+      labelComponents: ['Label'],
+      labelAttributes: ['id'],
+      depth: 3
+    }],
+    'jsx-a11y/anchor-is-valid': ['error', {
+      components: ['Link'],
+      specialLink: ['to'],
+      aspects: ['noHref', 'preferButton']
+    }],
+    'react/default-props-match-prop-types': [2, { allowRequiredDefaults: true }]
   }
 };
