@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-onny",
-  "version": "0.0.1-8",
+  "version": "0.0.1-9",
   "description": "Lint specs for Onny",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/onnyio/eslint-config-onny#readme",
   "dependencies": {
     "@babel/core": "^7.12.13",
-    "babel-eslint": "^10.1.0",
+    "@babel/eslint-parser": "^7.13.14",
     "chalk": "^4.1.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
