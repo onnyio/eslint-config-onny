@@ -92,7 +92,7 @@ module.exports = {
     /*
     * https://eslint.org/docs/rules/arrow-body-style
     */
-    'arrow-body-style': ['off'],
+    'arrow-body-style': [0],
     // 'arrow-body-style': [2, 'as-needed', { requireReturnForObjectLiteral: true }],
 
 
@@ -149,6 +149,7 @@ module.exports = {
           '__v',
           '__INITIAL_STATE__',
           '__DEVELOPMENT__',
+          '__BUILD_DATE__',
           '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__',
           '_reCAPTCHA_SECRET_KEY_',
           '__test__'
