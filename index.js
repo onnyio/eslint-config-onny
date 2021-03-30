@@ -22,7 +22,6 @@ module.exports = {
     mocha: true,
     es6: true
   },
-  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2018,
     ecmaFeatures: {
@@ -46,6 +45,7 @@ module.exports = {
     __TEST__: false,
     __DEVELOPMENT__: false,
     __LOGGING__: false,
+    __LOG_LOCATION__: false,
     __WIN32__: false
   },
   rules: {
