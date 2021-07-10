@@ -7,3 +7,5 @@
 
 
 common rules for eslint for onny projects
+
+For React based projects, use [eslint-config-onny-react](https://github.com/onnyio/eslint-config-onny-react)

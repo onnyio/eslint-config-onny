@@ -76,18 +76,6 @@ module.exports = {
      */
     'import/first': [2, 'absolute-first'],
 
-    /**
-     * @see [https://reactjs.org/docs/react-component.html#componentdidupdate]{@link https://reactjs.org/docs/react-component.html#componentdidupdate}
-     * @see [https://github.com/airbnb/javascript/issues/1875]{@link https://github.com/airbnb/javascript/issues/1875}
-     *
-     * The React docs say calling setState() in componentDidUpdate() is permitted, albeit with caveats.
-     *
-     * You may call setState() immediately in componentDidUpdate() but note that it must be
-     * wrapped in a condition like in the example above, or you’ll cause an infinite loop.
-     * It would also cause an extra re-rendering which, while not visible to the user,
-     * can affect the component performance.
-     */
-    'react/no-did-update-set-state': 0,
 
     /*
     * https://eslint.org/docs/rules/arrow-body-style
@@ -147,12 +135,7 @@ module.exports = {
           '__err__',
           '_id',
           '__v',
-          '__INITIAL_STATE__',
-          '__DEVELOPMENT__',
-          '__BUILD_DATE__',
-          '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__',
-          '_reCAPTCHA_SECRET_KEY_',
-          '__test__'
+          '__INITIAL_STATE__'
         ]
       }
     ],
@@ -175,51 +158,10 @@ module.exports = {
         }
       }],
 
-
-    ///////////////////
-    // React
-    ///////////////////////
     // When there is only a single export from a module, prefer using default export over named export.
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
     // this is prefered by airbnb, but i actually prefer named exports. makes it easier for the IDE
     // to assist me
-    'import/prefer-default-export': 0,
-
-
-    // Disallow JSX props spreading
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
-    'react/jsx-props-no-spreading': ['error', {
-      html: 'enforce',
-      custom: 'ignore',
-      exceptions: []
-    }],
-
-    // Enforces where React component static properties should be positioned
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
-    'react/static-property-placement': ['error', 'static public field'],
-    'react/destructuring-assignment': 0,
-    'react/require-default-props': [2, { forbidDefaultForRequired: false }],
-    'react/jsx-one-expression-per-line': 0,
-
-    /*
-    * Enforce that a label tag has a text label and an associated control.
-    *
-    * There are two supported ways to associate a label with a control:
-    *    * Wrapping a control in a label tag.
-    *    * Adding htmlFor to a label and assigning it a DOM ID string that indicates
-    *      an input on the page.
-    * https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
-    */
-    'jsx-a11y/label-has-associated-control': [2, {
-      labelComponents: ['Label'],
-      labelAttributes: ['id'],
-      depth: 3
-    }],
-    'jsx-a11y/anchor-is-valid': ['error', {
-      components: ['Link'],
-      specialLink: ['to'],
-      aspects: ['noHref', 'preferButton']
-    }],
-    'react/default-props-match-prop-types': [2, { allowRequiredDefaults: true }]
+    'import/prefer-default-export': 0
   }
 };
