@@ -48,15 +48,7 @@ module.exports = {
     __WIN32__: false
   },
   rules: {
-    /////////////////////
-    // Chai
-    // https://github.com/Turbo87/eslint-plugin-chai-expect
-    /////////////////////
     'no-unused-expressions': 0, // must disable the original, so we can replace it with the new one
-    'chai-friendly/no-unused-expressions': 2,
-    'chai-expect/no-inner-compare': 2,
-    'chai-expect/missing-assertion': 2,
-    'chai-expect/terminating-properties': 1,
 
 
     radix: 0,
