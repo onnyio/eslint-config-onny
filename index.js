@@ -15,11 +15,11 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'airbnb'
+    'airbnb',
+    'plugin:jest/recommended'
   ],
   env: {
     node: true,
-    mocha: true,
     es6: true
   },
   parserOptions: {
@@ -33,8 +33,7 @@ module.exports = {
   },
   plugins: [
     'import',
-    'chai-expect',
-    'chai-friendly'
+    'jest'
   ],
   globals: {
     // declare global variables. false means read only. to set it when false use global. (ex global.data sets the data global when false)

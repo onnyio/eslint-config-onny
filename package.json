@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-onny",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Lint specs for Onny",
   "main": "index.js",
   "scripts": {
@@ -25,10 +25,10 @@
     "chalk": "^4.1.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-webpack": "^0.13.0",
-    "eslint-plugin-chai-expect": "^2.2.0",
-    "eslint-plugin-chai-friendly": "^0.6.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-json": "^2.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "strip-ansi": "^6.0.0"
