@@ -14,26 +14,22 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended',
-    'airbnb',
-    'plugin:jest/recommended'
+    'airbnb'
   ],
   env: {
     node: true,
-    es6: true
+    es2021: true
   },
   parserOptions: {
     ecmaVersion: 2021,
     ecmaFeatures: {
-      jsx: true,
       modules: true,
       decorators: true
     },
     sourceType: 'module'
   },
   plugins: [
-    'import',
-    'jest'
+    'import'
   ],
   globals: {
     // declare global variables. false means read only. to set it when false use global. (ex global.data sets the data global when false)
