@@ -1,12 +1,12 @@
 {
   "name": "eslint-config-onny",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Lint specs for Onny",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .js --ext .jsx --ext .json --format ./eslintFormat",
-    "lint-fix": "eslint . --ext .js --ext .jsx --ext .json --format ./eslintFormat --fix",
-    "lint-fix_test": "eslint ./test --ext .js --format ./eslintFormat --fix"
+    "lint": "eslint . --ext .js --ext .jsx --ext .json",
+    "lint-fix": "eslint . --ext .js --ext .jsx --ext .json --fix",
+    "lint-fix_test": "eslint ./test --ext .js  --fix"
   },
   "repository": {
     "type": "git",
